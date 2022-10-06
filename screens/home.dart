@@ -14,58 +14,69 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Container(
         child: ListView(children: [
-          ListTile(
-            tileColor: Colors.blue,
-            hoverColor: Color.fromARGB(143, 114, 173, 180),
-            title: TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SetGoalPage()),
-                );
-              },
-              child: Text(
-                'New Goals',
-                style: TextStyle(color: Colors.black),
+          Card(
+            child: ListTile(
+              tileColor: Colors.blue,
+              hoverColor: Color.fromARGB(143, 114, 173, 180),
+              title: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SetGoalPage()),
+                  );
+                },
+                child: Text(
+                  'New Goals',
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
             ),
           ),
-          ListTile(
-            tileColor: Colors.blue,
-            title: TextButton(
-              onPressed: null,
-              child: Text('Track Goals', style: TextStyle(color: Colors.black)),
+          Card(
+            child: ListTile(
+              tileColor: Colors.blue,
+              title: TextButton(
+                onPressed: null,
+                child:
+                    Text('Track Goals', style: TextStyle(color: Colors.black)),
+              ),
             ),
           ),
-          ListTile(
-            tileColor: Colors.blue,
-            title: TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CalLogPage()),
-                );
-              },
-              child: Text('Daily Log', style: TextStyle(color: Colors.black)),
+          Card(
+            child: ListTile(
+              tileColor: Colors.blue,
+              title: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CalLogPage()),
+                  );
+                },
+                child: Text('Daily Log', style: TextStyle(color: Colors.black)),
+              ),
             ),
           ),
-          ListTile(
-            tileColor: Colors.blue,
-            title: TextButton(
-              onPressed: null,
-              child: Text('Sheets', style: TextStyle(color: Colors.black)),
+          Card(
+            child: ListTile(
+              tileColor: Colors.blue,
+              title: TextButton(
+                onPressed: null,
+                child: Text('Sheets', style: TextStyle(color: Colors.black)),
+              ),
             ),
           ),
-          ListTile(
-            tileColor: Colors.blue,
-            title: TextButton(
-              onPressed: null,
-              child: Text('Progress Report',
-                  style: TextStyle(color: Colors.black)),
+          Card(
+            child: ListTile(
+              tileColor: Colors.blue,
+              title: TextButton(
+                onPressed: null,
+                child: Text('Progress Report',
+                    style: TextStyle(color: Colors.black)),
+              ),
             ),
           ),
           Container(
-            height: 600.0,
+            height: 300.0,
             decoration: BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.centerLeft,
