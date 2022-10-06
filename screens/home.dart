@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
               },
               child: Text(
                 'New Goals',
-                style: TextStyle(color: Colors.black45),
+                style: TextStyle(color: Colors.black),
               ),
             ),
           ),
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
             tileColor: Colors.blue,
             title: TextButton(
               onPressed: null,
-              child: Text('Track Goals'),
+              child: Text('Track Goals', style: TextStyle(color: Colors.black)),
             ),
           ),
           ListTile(
@@ -46,24 +46,22 @@ class _HomePageState extends State<HomePage> {
                   MaterialPageRoute(builder: (context) => CalLogPage()),
                 );
               },
-              child: Text(
-                'Daily Log',
-                style: TextStyle(color: Colors.black45),
-              ),
+              child: Text('Daily Log', style: TextStyle(color: Colors.black)),
             ),
           ),
           ListTile(
             tileColor: Colors.blue,
             title: TextButton(
               onPressed: null,
-              child: Text('Sheets'),
+              child: Text('Sheets', style: TextStyle(color: Colors.black)),
             ),
           ),
           ListTile(
             tileColor: Colors.blue,
             title: TextButton(
               onPressed: null,
-              child: Text('Progress Report'),
+              child: Text('Progress Report',
+                  style: TextStyle(color: Colors.black)),
             ),
           ),
           Container(
