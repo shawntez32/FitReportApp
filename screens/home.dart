@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
 import 'homeroutes/dailyLogCal.dart';
@@ -17,6 +19,10 @@ class _HomePageState extends State<HomePage> {
         title: Text("Fit Report"),
       ),
       body: Container(
+        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/thirsty.jpg"))),
         child: ListView(children: [
           Card(
             child: ListTile(
@@ -56,7 +62,8 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => CalLogPage()),
                   );
                 },
-                child: Text('Calorie Log', style: TextStyle(color: Colors.black)),
+                child:
+                    Text('Calorie Log', style: TextStyle(color: Colors.black)),
               ),
             ),
           ),
@@ -70,7 +77,8 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => FitLogPage()),
                   );
                 },
-                child: Text('Fitness Log', style: TextStyle(color: Colors.black)),
+                child:
+                    Text('Fitness Log', style: TextStyle(color: Colors.black)),
               ),
             ),
           ),
@@ -95,14 +103,6 @@ class _HomePageState extends State<HomePage> {
           ),
           Container(
             height: 300.0,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: <Color>[
-                  Color.fromARGB(255, 218, 196, 89),
-                  Color.fromARGB(255, 114, 237, 114)
-                ])),
           )
         ]),
       ),
