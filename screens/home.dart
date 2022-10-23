@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
 import 'homeroutes/dailyLogCal.dart';
+import 'homeroutes/dailyLogFit.dart';
 import 'homeroutes/setGoals.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,6 +13,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Fit Report"),
+      ),
       body: Container(
         child: ListView(children: [
           Card(
@@ -52,7 +56,21 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => CalLogPage()),
                   );
                 },
-                child: Text('Daily Log', style: TextStyle(color: Colors.black)),
+                child: Text('Calorie Log', style: TextStyle(color: Colors.black)),
+              ),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              tileColor: Colors.blue,
+              title: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FitLogPage()),
+                  );
+                },
+                child: Text('Fitness Log', style: TextStyle(color: Colors.black)),
               ),
             ),
           ),
