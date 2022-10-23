@@ -74,19 +74,46 @@ class _SetGoalPageState extends State<SetGoalPage> {
                   ])),
               child: ListView(
                 children: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SetFitGoalPage()),
-                      );
-                    },
-                    child: Text('Fitness Goals'),
+                  Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SetFitGoalPage()),
+                        );
+                      },
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        padding: EdgeInsets.all(16.0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14.0),
+                        ),
+                      ),
+                      child: Text(
+                        'Fitness Goals',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
                   ),
-                  TextButton(
-                    onPressed: null,
-                    child: Text('Submit'),
-                  ),
+                  Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: TextButton(
+                      onPressed: null,
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        padding: EdgeInsets.all(16.0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14.0),
+                        ),
+                      ),
+                      child: Text(
+                        'Submit',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
