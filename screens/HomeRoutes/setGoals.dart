@@ -1,3 +1,6 @@
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, use_key_in_widget_constructors
+
+import 'package:app/screens/homeroutes/setFitGoals.dart';
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
 
@@ -12,38 +15,59 @@ class _SetGoalPageState extends State<SetGoalPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: 400.0,
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  colors: <Color>[
+                Color.fromARGB(255, 218, 196, 89),
+                Color.fromARGB(255, 114, 237, 114)
+              ])),
           child: ListView(children: [
-            ListTile(
-              tileColor: Colors.blue,
-              title: Text("Current Weight"),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: Text("Current Weight"),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: Text("Current Weight"),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: Text("Current Weight"),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: Text("Current Weight"),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: Text("Current Weight"),
+            Container(
+              height: 30,
+              color: Colors.blue,
+              child: TextField(
+                decoration: InputDecoration(labelText: "Current Weight"),
+              ),
             ),
             Container(
-              height: 400.0,
+              height: 30,
+              color: Colors.blue,
+              child: TextField(
+                decoration: InputDecoration(labelText: "Goal Weight"),
+              ),
+            ),
+            Container(
+              height: 30,
+              color: Colors.blue,
+              child: TextField(
+                decoration: InputDecoration(labelText: "Start Date"),
+              ),
+            ),
+            Container(
+              height: 30,
+              color: Colors.blue,
+              child: TextField(
+                decoration: InputDecoration(labelText: "End Date"),
+              ),
+            ),
+            Container(
+              height: 30,
+              color: Colors.blue,
+              child: TextField(
+                decoration: InputDecoration(labelText: "Caloric Intake Goal"),
+              ),
+            ),
+            Container(
+              height: 200.0,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
+                      // ignore: prefer_const_literals_to_create_immutables
                       colors: <Color>[
                     Color.fromARGB(255, 218, 196, 89),
                     Color.fromARGB(255, 114, 237, 114)
@@ -54,7 +78,7 @@ class _SetGoalPageState extends State<SetGoalPage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SetGoalPage()),
+                        MaterialPageRoute(builder: (context) => SetFitGoalPage()),
                       );
                     },
                     child: Text('Fitness Goals'),
