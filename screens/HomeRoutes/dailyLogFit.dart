@@ -1,12 +1,12 @@
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
 
-class SetGoalPage extends StatefulWidget {
+class FitLogPage extends StatefulWidget {
   @override
-  State<SetGoalPage> createState() => _SetGoalPageState();
+  State<FitLogPage> createState() => _FitLogPageState();
 }
 
-class _SetGoalPageState extends State<SetGoalPage> {
+class _FitLogPageState extends State<FitLogPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
