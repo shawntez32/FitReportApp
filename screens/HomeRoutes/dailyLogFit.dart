@@ -12,7 +12,8 @@ class _FitLogPageState extends State<FitLogPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: 800.0,
+          height: MediaQuery.of(context).size.height,
+          color: Colors.blue,
           child: ListView(children: [
             ListTile(
               tileColor: Colors.blue,
@@ -51,7 +52,7 @@ class _FitLogPageState extends State<FitLogPage> {
                       border: OutlineInputBorder(), labelText: 'Meal 6')),
             ),
             Container(
-              height: 100.0,
+              height: 50.0,
               child: ListView(
                 children: [
                   TextButton(
@@ -62,7 +63,7 @@ class _FitLogPageState extends State<FitLogPage> {
               ),
             ),
             Container(
-              height: 400.0,
+              height: 50.0,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.centerLeft,
