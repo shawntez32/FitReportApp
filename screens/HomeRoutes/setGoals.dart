@@ -12,46 +12,31 @@ class _SetGoalPageState extends State<SetGoalPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: 800.0,
+          height: 400.0,
           child: ListView(children: [
             ListTile(
               tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Current Weight')),
+              title: Text("Current Weight"),
             ),
             ListTile(
               tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Weight Goal')),
+              title: Text("Current Weight"),
             ),
             ListTile(
               tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Caloric Intake')),
+              title: Text("Current Weight"),
             ),
             ListTile(
               tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Protein')),
+              title: Text("Current Weight"),
             ),
             ListTile(
               tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Carbohydrates')),
+              title: Text("Current Weight"),
             ),
             ListTile(
               tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Fat')),
+              title: Text("Current Weight"),
             ),
             Container(
               height: 400.0,
