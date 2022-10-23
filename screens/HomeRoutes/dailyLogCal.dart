@@ -12,46 +12,46 @@ class _CalLogPageState extends State<CalLogPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: 800.0,
+          height: MediaQuery.of(context).size.height,
           child: ListView(children: [
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Meal 1')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Meal 2')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Meal 3')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Meal 4')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Meal 5')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Meal 6')),
             ),
             Container(
-              height: 400.0,
+              height: 100.0,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.centerLeft,
