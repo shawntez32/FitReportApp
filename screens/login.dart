@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:app/api_service/get.dart';
 import 'package:app/screens/register.dart';
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
@@ -14,31 +13,9 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final _emailController = TextEditingController();
-  Future apiCall() async {
-    http.Response response;
-    response =
-        await http.get(Uri.parse('https://fitreportusers22.herokuapp.com/'));
-    if (response.statusCode == 200) {
-      setState(() {
-        stringResponse = response.body;
-        mapResponse = json.decode(response.body);
-      });
-    }
-  }
 
   var stringResponse;
   var mapResponse;
-
-  @override
-  void initState() {
-    apiCall();
-    super.initState();
-  }
-
-  @override
-  void getMatchingUser(email, pword) {
-    inspect(mapResponse);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -110,13 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               TextButton(
-                onPressed: () {
-                  getUserData();
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => RegisterPage()),
-                  );
-                },
+                onPressed: null,
                 child: Text(
                   'Don\'t have an account? Register!',
                   textAlign: TextAlign.center,
