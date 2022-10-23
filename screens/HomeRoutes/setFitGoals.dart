@@ -12,41 +12,42 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: 800.0,
+          height: MediaQuery.of(context).size.height,
+          color: Color.fromARGB(255, 114, 237, 114),
           child: ListView(children: [
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Workout 1')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Workout 2')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Workout 3')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Workout 4')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Workout 5')),
             ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
+            Container(
+              height: 30,
+              child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: 'Workout 6')),
             ),
