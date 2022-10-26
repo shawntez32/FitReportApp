@@ -19,79 +19,19 @@ class _HomePageState extends State<HomePage> {
           title: Text("Fit Report"),
         ),
         body: Container(
-            height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/thirsty.jpg"))),
-            child: Expanded(
-              child: Row(children: [
-                Expanded(
-                  child: Column(children: [
-                    Container(
-                      height: 60,
-                      child: Card(
-                        child: ListTile(
-                          tileColor: Colors.blue,
-                          hoverColor: Color.fromARGB(143, 114, 173, 180),
-                          title: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SetGoalPage()),
-                              );
-                            },
-                            child: Text(
-                              'New Goals',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ]),
-                ),
-                Expanded(
-                  child: Column(children: [
-                    Container(
-                      height: 60,
-                      child: Card(
-                        child: ListTile(
-                          tileColor: Colors.blue,
-                          title: TextButton(
-                            onPressed: null,
-                            child: Text('Track Goals',
-                                style: TextStyle(color: Colors.black)),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ]),
-                ),
-                Expanded(
-                  child: Column(children: [
-                    Container(
-                      height: 60,
-                      child: Card(
-                        child: ListTile(
-                          tileColor: Colors.blue,
-                          title: TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => CalLogPage()),
-                              );
-                            },
-                            child: Text('Calorie Log',
-                                style: TextStyle(color: Colors.black)),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ]),
-                ),
-              ]),
-            )));
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/thirsty.jpg"))),
+          child: Expanded(
+              child: Column(
+            children: [
+              Container(
+                height: 50,
+                color: Colors.cyan,
+              )
+            ],
+          )),
+        ));
   }
 }
