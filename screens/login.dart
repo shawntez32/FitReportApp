@@ -87,7 +87,12 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               TextButton(
-                onPressed: null,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegisterPage()),
+                  );
+                },
                 child: Text(
                   'Don\'t have an account? Register!',
                   textAlign: TextAlign.center,
