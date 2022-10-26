@@ -23,15 +23,42 @@ class _HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("assets/images/thirsty.jpg"))),
-          child: Expanded(
-              child: Column(
-            children: [
-              Container(
-                height: 50,
-                color: Colors.cyan,
-              )
-            ],
-          )),
+          child: ListView(children: [
+            Expanded(
+              child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Container(
+                      height: 50,
+                      color: Colors.cyan,
+                      child: Text("Yo"),
+                    ),
+                    Container(
+                      height: 50,
+                      color: Colors.purple,
+                      child: Text("Yo"),
+                    ),
+                  ]),
+            ),
+            Expanded(
+              child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Container(
+                      height: 50,
+                      color: Colors.cyan,
+                      child: Text("Yo2"),
+                    ),
+                    Container(
+                      height: 50,
+                      color: Colors.purple,
+                      child: Text("Yo2"),
+                    ),
+                  ]),
+            ),
+          ]),
         ));
   }
 }
