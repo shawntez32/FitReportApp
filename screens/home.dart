@@ -45,8 +45,14 @@ class _HomePageState extends State<HomePage> {
                           fit: BoxFit.cover,
                           image: AssetImage('assets/images/yoga.jpg'),
                         ),
-                        Card(child: Text("Calorie Goals")),
-                        Text("Set up Calorie Goals"),
+                        Card(
+                          child: Text("Calorie Goals"),
+                          color: Colors.blue,
+                        ),
+                        Text(
+                          "Set up Calorie Goals",
+                          textAlign: TextAlign.center,
+                        ),
                       ]),
                     ),
                     Container(
@@ -61,7 +67,14 @@ class _HomePageState extends State<HomePage> {
                           fit: BoxFit.cover,
                           image: AssetImage('assets/images/squat.jpg'),
                         ),
-                        Card(child: Text("Workout Goals"))
+                        Card(
+                          child: Text("Workout Goals"),
+                          color: Colors.blue,
+                        ),
+                        Text(
+                          "Set up Workout Goals",
+                          textAlign: TextAlign.center,
+                        ),
                       ]),
                     ),
                   ]),
@@ -86,7 +99,14 @@ class _HomePageState extends State<HomePage> {
                           fit: BoxFit.cover,
                           image: AssetImage('assets/images/thirsty.jpg'),
                         ),
-                        Card(child: Text("Calorie Log"))
+                        Card(
+                          child: Text("Calorie Log"),
+                          color: Colors.blue,
+                        ),
+                        Text(
+                          "Add to Calorie Log",
+                          textAlign: TextAlign.center,
+                        ),
                       ]),
                     ),
                     Container(
@@ -102,7 +122,14 @@ class _HomePageState extends State<HomePage> {
                           fit: BoxFit.fill,
                           image: AssetImage('assets/images/weights.jpg'),
                         ),
-                        Card(child: Text("Fitness Log"))
+                        Card(
+                          child: Text("Fitness Log"),
+                          color: Colors.blue,
+                        ),
+                        Text(
+                          "Add to Fitness Log",
+                          textAlign: TextAlign.center,
+                        ),
                       ]),
                     ),
                   ]),
