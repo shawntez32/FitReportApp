@@ -47,7 +47,11 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Card(
                           child: TextButton(
-                              onPressed: null, child: Text("Calorie Goals")),
+                              onPressed: null,
+                              child: Text(
+                                "Calorie Goals",
+                                style: TextStyle(color: Colors.white),
+                              )),
                           color: Colors.blue,
                         ),
                         Text(
@@ -70,7 +74,11 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Card(
                           child: TextButton(
-                              onPressed: null, child: Text("Workout Goals")),
+                              onPressed: null,
+                              child: Text(
+                                "Workout Goals",
+                                style: TextStyle(color: Colors.white),
+                              )),
                           color: Colors.blue,
                         ),
                         Text(
@@ -103,7 +111,11 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Card(
                           child: TextButton(
-                              onPressed: null, child: Text("Calorie Log")),
+                              onPressed: null,
+                              child: Text(
+                                "Calorie Log",
+                                style: TextStyle(color: Colors.white),
+                              )),
                           color: Colors.blue,
                         ),
                         Text(
@@ -127,7 +139,11 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Card(
                           child: TextButton(
-                              onPressed: null, child: Text("Fitness Log")),
+                              onPressed: null,
+                              child: Text(
+                                "Fitness Log",
+                                style: TextStyle(color: Colors.white),
+                              )),
                           color: Colors.blue,
                         ),
                         Text(
