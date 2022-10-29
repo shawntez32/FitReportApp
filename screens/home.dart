@@ -25,33 +25,58 @@ class _HomePageState extends State<HomePage> {
                   image: AssetImage("assets/images/deadlift.jpg"),
                   fit: BoxFit.cover)),
           child: ListView(children: [
-            Expanded(
-              child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Container(
-                      height: 50,
-                      color: Colors.cyan,
-                      child: Text("Yo"),
-                    ),
-                    Container(
-                      height: 50,
-                      color: Colors.purple,
-                      child: Text("Yo"),
-                    ),
-                  ]),
-            ),
             SizedBox(
-              height: 30,
+              height: 40,
             ),
             Expanded(
               child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Container(
                       height: 180,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(children: [
+                        const Image(
+                          height: 100,
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/yoga.jpg'),
+                        ),
+                        Card(child: Text("Calorie Goals")),
+                        Text("Set up Calorie Goals"),
+                      ]),
+                    ),
+                    Container(
+                      height: 180,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(children: [
+                        const Image(
+                          height: 100,
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/squat.jpg'),
+                        ),
+                        Card(child: Text("Workout Goals"))
+                      ]),
+                    ),
+                  ]),
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            Expanded(
+              child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Container(
+                      height: 180,
+                      width: 120,
                       decoration: BoxDecoration(
                           color: Colors.blueGrey,
                           borderRadius: BorderRadius.circular(10)),
@@ -61,13 +86,24 @@ class _HomePageState extends State<HomePage> {
                           fit: BoxFit.cover,
                           image: AssetImage('assets/images/thirsty.jpg'),
                         ),
-                        Card(child: Text("Yo2"))
+                        Card(child: Text("Calorie Log"))
                       ]),
                     ),
                     Container(
-                      height: 50,
-                      color: Colors.purple,
-                      child: Text("Yo2"),
+                      height: 180,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(children: [
+                        const Image(
+                          height: 100,
+                          width: 120,
+                          fit: BoxFit.fill,
+                          image: AssetImage('assets/images/weights.jpg'),
+                        ),
+                        Card(child: Text("Fitness Log"))
+                      ]),
                     ),
                   ]),
             ),
