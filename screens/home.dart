@@ -22,7 +22,8 @@ class _HomePageState extends State<HomePage> {
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/images/thirsty.jpg"))),
+                  image: AssetImage("assets/images/deadlift.jpg"),
+                  fit: BoxFit.cover)),
           child: ListView(children: [
             Expanded(
               child: Row(
@@ -41,15 +42,27 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ]),
             ),
+            SizedBox(
+              height: 30,
+            ),
             Expanded(
               child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Container(
-                      height: 50,
-                      color: Colors.cyan,
-                      child: Text("Yo2"),
+                      height: 180,
+                      decoration: BoxDecoration(
+                          color: Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(children: [
+                        const Image(
+                          height: 100,
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/thirsty.jpg'),
+                        ),
+                        Card(child: Text("Yo2"))
+                      ]),
                     ),
                     Container(
                       height: 50,
