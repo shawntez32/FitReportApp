@@ -46,7 +46,8 @@ class _HomePageState extends State<HomePage> {
                           image: AssetImage('assets/images/yoga.jpg'),
                         ),
                         Card(
-                          child: Text("Calorie Goals"),
+                          child: TextButton(
+                              onPressed: null, child: Text("Calorie Goals")),
                           color: Colors.blue,
                         ),
                         Text(
@@ -68,7 +69,8 @@ class _HomePageState extends State<HomePage> {
                           image: AssetImage('assets/images/squat.jpg'),
                         ),
                         Card(
-                          child: Text("Workout Goals"),
+                          child: TextButton(
+                              onPressed: null, child: Text("Workout Goals")),
                           color: Colors.blue,
                         ),
                         Text(
@@ -100,7 +102,8 @@ class _HomePageState extends State<HomePage> {
                           image: AssetImage('assets/images/thirsty.jpg'),
                         ),
                         Card(
-                          child: Text("Calorie Log"),
+                          child: TextButton(
+                              onPressed: null, child: Text("Calorie Log")),
                           color: Colors.blue,
                         ),
                         Text(
@@ -123,7 +126,8 @@ class _HomePageState extends State<HomePage> {
                           image: AssetImage('assets/images/weights.jpg'),
                         ),
                         Card(
-                          child: Text("Fitness Log"),
+                          child: TextButton(
+                              onPressed: null, child: Text("Fitness Log")),
                           color: Colors.blue,
                         ),
                         Text(
