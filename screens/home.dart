@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                       height: 180,
                       width: 120,
                       decoration: BoxDecoration(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(children: [
                         const Image(
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                       height: 180,
                       width: 120,
                       decoration: BoxDecoration(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(children: [
                         const Image(
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                       height: 180,
                       width: 120,
                       decoration: BoxDecoration(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(children: [
                         const Image(
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                       height: 180,
                       width: 120,
                       decoration: BoxDecoration(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(children: [
                         const Image(
