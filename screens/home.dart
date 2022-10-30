@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => SetGoalPage()),
+                                        builder: (context) => CalLogPage()),
                                   );
                                 },
                                 child: Text(
@@ -198,7 +198,7 @@ class _HomePageState extends State<HomePage> {
                           const Image(
                             height: 100,
                             fit: BoxFit.cover,
-                            image: AssetImage('assets/images/thirsty.jpg'),
+                            image: AssetImage('assets/images/report.jpg'),
                           ),
                           Card(
                             child: TextButton(
@@ -232,7 +232,7 @@ class _HomePageState extends State<HomePage> {
                             height: 100,
                             width: 120,
                             fit: BoxFit.fill,
-                            image: AssetImage('assets/images/weights.jpg'),
+                            image: AssetImage('assets/images/sunshine.jpg'),
                           ),
                           Card(
                             child: TextButton(
