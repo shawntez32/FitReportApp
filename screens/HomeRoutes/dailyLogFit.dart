@@ -13,50 +13,62 @@ class _FitLogPageState extends State<FitLogPage> {
       appBar: AppBar(title: Text("Fit Report")),
       body: SingleChildScrollView(
         child: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/deadlift.jpg"),
+                  fit: BoxFit.cover)),
           height: MediaQuery.of(context).size.height,
-          color: Colors.blue,
           child: ListView(children: [
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 1')),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 2')),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 3')),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 4')),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 5')),
-            ),
-            ListTile(
-              tileColor: Colors.blue,
-              title: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 6')),
+            Container(
+              height: 200,
+              color: Colors.white,
+              child: ListView(
+                children: [
+                  Container(
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(), labelText: 'Meal 1')),
+                  ),
+                  Container(
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(), labelText: 'Meal 2')),
+                  ),
+                  Container(
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(), labelText: 'Meal 3')),
+                  ),
+                  Container(
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(), labelText: 'Meal 4')),
+                  ),
+                  Container(
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(), labelText: 'Meal 5')),
+                  ),
+                  Container(
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(), labelText: 'Meal 6')),
+                  ),
+                ],
+              ),
             ),
             Container(
               height: 50.0,
               child: ListView(
                 children: [
                   TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      padding: EdgeInsets.all(16.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                    ),
                     onPressed: null,
                     child: Text('Fitness Goals'),
                   ),
@@ -65,17 +77,16 @@ class _FitLogPageState extends State<FitLogPage> {
             ),
             Container(
               height: 50.0,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      colors: <Color>[
-                    Color.fromARGB(255, 218, 196, 89),
-                    Color.fromARGB(255, 114, 237, 114)
-                  ])),
               child: ListView(
                 children: [
                   TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      padding: EdgeInsets.all(16.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                    ),
                     onPressed: null,
                     child: Text('Set Goal'),
                   ),
