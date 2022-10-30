@@ -5,6 +5,7 @@ import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
 import 'homeroutes/dailyLogCal.dart';
 import 'homeroutes/dailyLogFit.dart';
+import 'homeroutes/report.dart';
 import 'homeroutes/setGoals.dart';
 
 class HomePage extends StatefulWidget {
@@ -206,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => SetGoalPage()),
+                                        builder: (context) => ReportPage()),
                                   );
                                 },
                                 child: Text(
