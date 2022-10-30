@@ -1,17 +1,17 @@
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
 
-class CalLogPage extends StatefulWidget {
+class ReportPage extends StatefulWidget {
   @override
-  State<CalLogPage> createState() => _CalLogPageState();
+  State<ReportPage> createState() => _ReportPageState();
 }
 
-class _CalLogPageState extends State<CalLogPage> {
+class _ReportPageState extends State<ReportPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Fit Report"),
+        title: Text("Fitness Report"),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -21,55 +21,59 @@ class _CalLogPageState extends State<CalLogPage> {
                   fit: BoxFit.cover)),
           height: MediaQuery.of(context).size.height,
           child: ListView(children: [
+            SizedBox(
+              height: 30,
+            ),
             Container(
-                height: 300,
-                color: Colors.white,
-                child: ListView(
-                  children: [
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 1')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 2')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 3')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 4')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 5')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 6')),
-                    ),
-                  ],
-                )),
+              height: 120,
+              color: Colors.white,
+              child: ListView(
+                children: [
+                  Container(
+                    height: 30,
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Weight Goal')),
+                  ),
+                  Container(
+                    height: 30,
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Current Weight')),
+                  ),
+                  Container(
+                    height: 30,
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Timeframe(Days)')),
+                  ),
+                  Container(
+                    height: 30,
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Caloric Intake Goal')),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 100.0,
+              child: ListView(
+                children: [
+                  TextButton(
+                    onPressed: null,
+                    child: Text('Fitness Goals'),
+                  ),
+                ],
+              ),
+            ),
             Container(
               height: 100.0,
               child: ListView(
@@ -77,10 +81,6 @@ class _CalLogPageState extends State<CalLogPage> {
                   TextButton(
                     onPressed: null,
                     child: Text('Set Goal'),
-                  ),
-                  TextButton(
-                    onPressed: null,
-                    child: Text('Fitness Goals'),
                   ),
                 ],
               ),
