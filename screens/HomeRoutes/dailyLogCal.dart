@@ -1,17 +1,17 @@
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
 
-class ReportPage extends StatefulWidget {
+class CalLogPage extends StatefulWidget {
   @override
-  State<ReportPage> createState() => _ReportPageState();
+  State<CalLogPage> createState() => _CalLogPageState();
 }
 
-class _ReportPageState extends State<ReportPage> {
+class _CalLogPageState extends State<CalLogPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Fitness Report"),
+        title: Text("Fit Report"),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -25,62 +25,71 @@ class _ReportPageState extends State<ReportPage> {
               height: 30,
             ),
             Container(
-              height: 120,
-              color: Colors.white,
-              child: ListView(
-                children: [
-                  Container(
-                    height: 30,
-                    child: TextField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'Weight Goal')),
-                  ),
-                  Container(
-                    height: 30,
-                    child: TextField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'Current Weight')),
-                  ),
-                  Container(
-                    height: 30,
-                    child: TextField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'Timeframe(Days)')),
-                  ),
-                  Container(
-                    height: 30,
-                    child: TextField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'Caloric Intake Goal')),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
+                height: 180,
+                color: Colors.white,
+                child: ListView(
+                  children: [
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 1')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 2')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 3')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 4')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 5')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 6')),
+                    ),
+                  ],
+                )),
             Container(
               height: 100.0,
               child: ListView(
                 children: [
+                  SizedBox(height: 15),
                   TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      padding: EdgeInsets.all(16.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                    ),
                     onPressed: null,
-                    child: Text('Fitness Goals'),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 100.0,
-              child: ListView(
-                children: [
-                  TextButton(
-                    onPressed: null,
-                    child: Text('Set Goal'),
+                    child: Text(
+                      'Submit',
+                    ),
                   ),
                 ],
               ),
