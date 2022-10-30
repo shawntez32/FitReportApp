@@ -15,54 +15,63 @@ class _CalLogPageState extends State<CalLogPage> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/deadlift.jpg"),
+                  fit: BoxFit.cover)),
           height: MediaQuery.of(context).size.height,
           child: ListView(children: [
             Container(
-              height: 30,
-              child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 1')),
-            ),
-            Container(
-              height: 30,
-              child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 2')),
-            ),
-            Container(
-              height: 30,
-              child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 3')),
-            ),
-            Container(
-              height: 30,
-              child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 4')),
-            ),
-            Container(
-              height: 30,
-              child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 5')),
-            ),
-            Container(
-              height: 30,
-              child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Meal 6')),
-            ),
+                height: 300,
+                color: Colors.white,
+                child: ListView(
+                  children: [
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 1')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 2')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 3')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 4')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 5')),
+                    ),
+                    Container(
+                      height: 30,
+                      child: TextField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Meal 6')),
+                    ),
+                  ],
+                )),
             Container(
               height: 100.0,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      colors: <Color>[
-                    Color.fromARGB(255, 218, 196, 89),
-                    Color.fromARGB(255, 114, 237, 114)
-                  ])),
               child: ListView(
                 children: [
                   TextButton(
