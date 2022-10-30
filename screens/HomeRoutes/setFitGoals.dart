@@ -21,6 +21,7 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
                   fit: BoxFit.cover)),
           height: MediaQuery.of(context).size.height,
           child: ListView(children: [
+            SizedBox(height: 30),
             Container(
               height: 200,
               color: Colors.white,
@@ -76,6 +77,13 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
               child: ListView(
                 children: [
                   TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      padding: EdgeInsets.all(16.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14.0),
+                      ),
+                    ),
                     onPressed: null,
                     child: Text('Set Goal'),
                   ),
