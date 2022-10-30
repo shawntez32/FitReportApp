@@ -25,7 +25,7 @@ class _ReportPageState extends State<ReportPage> {
               height: 30,
             ),
             Container(
-              height: 220,
+              height: 120,
               color: Colors.white,
               child: ListView(
                 children: [
@@ -57,16 +57,19 @@ class _ReportPageState extends State<ReportPage> {
                             border: OutlineInputBorder(),
                             labelText: 'Caloric Intake Goal')),
                   ),
-                  Container(
-                    height: 100.0,
-                    child: ListView(
-                      children: [
-                        TextButton(
-                          onPressed: null,
-                          child: Text('Fitness Goals'),
-                        ),
-                      ],
-                    ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: 100.0,
+              child: ListView(
+                children: [
+                  TextButton(
+                    onPressed: null,
+                    child: Text('Fitness Goals'),
                   ),
                 ],
               ),
