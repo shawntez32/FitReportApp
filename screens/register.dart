@@ -1,3 +1,4 @@
+import 'package:app/screens/home.dart';
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
 import 'package:app/api_service/post.dart';
@@ -8,18 +9,25 @@ class RegisterPage extends StatefulWidget {
   State<RegisterPage> createState() => _RegisterPageState();
 }
 
-Future<UserFit?> createUser(
-    String fname, String lname, String email, String pword) async {
-  final String apiUrl = 'https://fitreportusers22.herokuapp.com/';
-  final response = await http.post(Uri.parse(apiUrl),
-      body: {"fname": fname, "lname": lname, "email": email, "pword": pword});
+Future<String> submitData(email, pword, fname, lname) async {
+  var url = 'https://fitreportusers22.herokuapp.com/Login';
+  var response = await http
+      .post(Uri.https('fitreportusers22.herokuapp.com', 'Login'), body: {
+    'email': email,
+    'pword': pword,
+    "fname": fname,
+    "lname": lname,
+  });
+  var data = response.body;
+  print(data);
 
-  if (response.statusCode == 201) {
-    final String stringResponse = response.body;
-    return userFitFromJson(stringResponse);
+  if (response.statusCode == 200) {
+    print('Sign-up successful');
   } else {
-    return null;
+    print('Sign-up Unsuccessful');
   }
+
+  return data;
 }
 
 class _RegisterPageState extends State<RegisterPage> {
@@ -117,8 +125,11 @@ class _RegisterPageState extends State<RegisterPage> {
                       final email = _emailControl.text;
                       final pword = _pwordControl.text;
 
-                      final Future<UserFit?> userFit =
-                          createUser(fname, lname, email, pword);
+                      submitData(fname, lname, email, pword);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
                     },
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.blue,
