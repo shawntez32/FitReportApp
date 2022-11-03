@@ -125,7 +125,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       final email = _emailControl.text;
                       final pword = _pwordControl.text;
 
-                      submitData(fname, lname, email, pword);
+                      submitData(email, pword, fname, lname);
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => HomePage()),
