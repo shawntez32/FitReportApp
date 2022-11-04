@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       Container(
-                        height: 200,
+                        height: 220,
                         width: 120,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                         ]),
                       ),
                       Container(
-                        height: 200,
+                        height: 220,
                         width: 120,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       Container(
-                        height: 200,
+                        height: 220,
                         width: 120,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                         ]),
                       ),
                       Container(
-                        height: 200,
+                        height: 220,
                         width: 120,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       Container(
-                        height: 200,
+                        height: 220,
                         width: 120,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -223,7 +223,7 @@ class _HomePageState extends State<HomePage> {
                         ]),
                       ),
                       Container(
-                        height: 200,
+                        height: 220,
                         width: 120,
                         decoration: BoxDecoration(
                             color: Colors.white,
