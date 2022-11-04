@@ -1,3 +1,4 @@
+import 'package:app/screens/login.dart';
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
 
@@ -6,7 +7,40 @@ class CalLogPage extends StatefulWidget {
   State<CalLogPage> createState() => _CalLogPageState();
 }
 
+Future<String> submitCalData(
+    date, userid, meal1, meal2, meal3, meal4, meal5, meal6) async {
+  var url = 'https://fitreportusers22.herokuapp.com/Login';
+  var response = await http
+      .post(Uri.https('fitreportusers22.herokuapp.com', 'Login'), body: {
+    "date": date,
+    "userId": userid,
+    "meal1": meal1,
+    "meal2": meal2,
+    "meal3": meal3,
+    "meal4": meal4,
+    "meal5": meal5,
+    "meal6": meal6
+  });
+  var data = response.body;
+  print(data);
+
+  if (response.statusCode == 200) {
+    print('Sign-up successful');
+  } else {
+    print('Sign-up Unsuccessful');
+  }
+
+  return data;
+}
+
 class _CalLogPageState extends State<CalLogPage> {
+  final meal1 = TextEditingController();
+  final meal2 = TextEditingController();
+  final meal3 = TextEditingController();
+  final meal4 = TextEditingController();
+  final meal5 = TextEditingController();
+  final meal6 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,6 +66,7 @@ class _CalLogPageState extends State<CalLogPage> {
                     Container(
                       height: 30,
                       child: TextField(
+                          controller: meal1,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Meal 1')),
@@ -39,6 +74,7 @@ class _CalLogPageState extends State<CalLogPage> {
                     Container(
                       height: 30,
                       child: TextField(
+                          controller: meal2,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Meal 2')),
@@ -46,6 +82,7 @@ class _CalLogPageState extends State<CalLogPage> {
                     Container(
                       height: 30,
                       child: TextField(
+                          controller: meal3,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Meal 3')),
@@ -53,6 +90,7 @@ class _CalLogPageState extends State<CalLogPage> {
                     Container(
                       height: 30,
                       child: TextField(
+                          controller: meal4,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Meal 4')),
@@ -60,6 +98,7 @@ class _CalLogPageState extends State<CalLogPage> {
                     Container(
                       height: 30,
                       child: TextField(
+                          controller: meal5,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Meal 5')),
@@ -67,6 +106,7 @@ class _CalLogPageState extends State<CalLogPage> {
                     Container(
                       height: 30,
                       child: TextField(
+                          controller: meal6,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Meal 6')),
@@ -86,7 +126,10 @@ class _CalLogPageState extends State<CalLogPage> {
                         borderRadius: BorderRadius.circular(14.0),
                       ),
                     ),
-                    onPressed: null,
+                    onPressed: () {
+                      submitCalData(now, userId, meal1, meal2, meal3, meal4,
+                          meal5, meal6);
+                    },
                     child: Text(
                       'Submit',
                     ),
