@@ -1,12 +1,45 @@
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
+import 'package:app/screens/login.dart';
 
 class FitLogPage extends StatefulWidget {
   @override
   State<FitLogPage> createState() => _FitLogPageState();
 }
 
+Future<String> submitWkoData(date, userid, workout1, workout2, workout3,
+    workout4, workout5, workout6) async {
+  var response = await http
+      .post(Uri.https('fitreportusers22.herokuapp.com', 'LogFitness'), body: {
+    "date": date,
+    "userId": userid,
+    "meal1": workout1,
+    "meal2": workout2,
+    "meal3": workout3,
+    "meal4": workout4,
+    "meal5": workout5,
+    "meal6": workout6
+  });
+  var data = response.body;
+  print(data);
+
+  if (response.statusCode == 200) {
+    print('Sign-up successful');
+  } else {
+    print('Sign-up Unsuccessful');
+  }
+
+  return data;
+}
+
 class _FitLogPageState extends State<FitLogPage> {
+  final workout1 = TextEditingController();
+  final workout2 = TextEditingController();
+  final workout3 = TextEditingController();
+  final workout4 = TextEditingController();
+  final workout5 = TextEditingController();
+  final workout6 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,8 +109,12 @@ class _FitLogPageState extends State<FitLogPage> {
                         borderRadius: BorderRadius.circular(14.0),
                       ),
                     ),
-                    onPressed: null,
-                    child: Text('Submit'),
+                    onPressed: () {
+                      submitWkoData(now, userId, workout1, workout2, workout3,
+                          workout4, workout5, workout6);
+                    },
+                    child:
+                        Text('Submit', style: TextStyle(color: Colors.black)),
                   ),
                 ],
               ),
