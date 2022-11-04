@@ -3,8 +3,10 @@ import 'dart:developer';
 import 'package:app/screens/register.dart';
 import "package:flutter/material.dart";
 import 'package:http/http.dart' as http;
-
 import 'home.dart';
+import 'package:intl/intl.dart';
+
+String now = DateFormat("MM-dd-yyyy").format(DateTime.now());
 
 class LoginPage extends StatefulWidget {
   @override
@@ -33,7 +35,6 @@ class _LoginPageState extends State<LoginPage> {
     var client = http.Client();
     var uri = Uri.parse(apiUrl);
     var response = await client.get(uri);
-    print(response.body);
     List list = json.decode(response.body);
     i = 0;
     while (i < list.length) {
@@ -57,9 +58,6 @@ class _LoginPageState extends State<LoginPage> {
         loginSuccessful = false;
         print("unsuccessful");
       }
-      print(i);
-      print(list[i]["email"] + list[i]["pword"]);
-      print(email + pword);
       i = i + 1;
     }
     return email;
