@@ -9,9 +9,8 @@ class CalLogPage extends StatefulWidget {
 
 Future<String> submitCalData(
     date, userid, meal1, meal2, meal3, meal4, meal5, meal6) async {
-  var url = 'https://fitreportusers22.herokuapp.com/Login';
   var response = await http
-      .post(Uri.https('fitreportusers22.herokuapp.com', 'Login'), body: {
+      .post(Uri.https('fitreportusers22.herokuapp.com', 'LogCalories'), body: {
     "date": date,
     "userId": userid,
     "meal1": meal1,
@@ -127,11 +126,12 @@ class _CalLogPageState extends State<CalLogPage> {
                       ),
                     ),
                     onPressed: () {
-                      submitCalData(now, userId, meal1, meal2, meal3, meal4,
-                          meal5, meal6);
+                      submitCalData(now, userId, meal1.text, meal2.text,
+                          meal3.text, meal4.text, meal5.text, meal6.text);
                     },
                     child: Text(
                       'Submit',
+                      style: TextStyle(color: Colors.black),
                     ),
                   ),
                 ],
