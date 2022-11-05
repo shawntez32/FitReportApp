@@ -40,6 +40,13 @@ class _CalLogPageState extends State<CalLogPage> {
   final meal5 = TextEditingController();
   final meal6 = TextEditingController();
 
+  final cals1 = TextEditingController();
+  final cals2 = TextEditingController();
+  final cals3 = TextEditingController();
+  final cals4 = TextEditingController();
+  final cals5 = TextEditingController();
+  final cals6 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,58 +65,135 @@ class _CalLogPageState extends State<CalLogPage> {
               height: 30,
             ),
             Container(
-                height: 180,
+                height: 210,
                 color: Colors.white,
                 child: ListView(
                   children: [
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          controller: meal1,
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 1')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          controller: meal2,
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 2')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          controller: meal3,
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 3')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          controller: meal4,
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 4')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          controller: meal5,
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 5')),
-                    ),
-                    Container(
-                      height: 30,
-                      child: TextField(
-                          controller: meal6,
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Meal 6')),
-                    ),
+                    Expanded(
+                        child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: [
+                            Container(child: Text("Meal Name:")),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: meal1,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Meal 1')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: meal2,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Meal 2')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: meal3,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Meal 3')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: meal4,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Meal 4')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: meal5,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Meal 5')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: meal6,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Meal 6')),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(child: Text("Calories:")),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: cals1,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Calories 1')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: cals2,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Calories 2')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: cals3,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Calories 3')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: cals4,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Calories 4')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: cals5,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Calories 5')),
+                            ),
+                            Container(
+                              height: 30,
+                              width: 150,
+                              child: TextField(
+                                  controller: cals6,
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      labelText: 'Calories 6')),
+                            ),
+                          ],
+                        )
+                      ],
+                    )),
                   ],
                 )),
             Container(
