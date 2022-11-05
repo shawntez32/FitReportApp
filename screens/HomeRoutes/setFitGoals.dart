@@ -48,7 +48,8 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
           child: ListView(children: [
             SizedBox(height: 30),
             Container(
-                height: 222,
+                color: Colors.white,
+                height: 260,
                 child: Expanded(
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,39 +59,42 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
                         children: [
                           Container(
                             height: 40,
-                            color: Colors.white,
                             child: Text("Workout Name:"),
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
-                                decoration: InputDecoration(
-                                    border: OutlineInputBorder(),
-                                    labelText: 'Workout 1')),
+                              decoration: InputDecoration(
+                                  hintText: "Jogging",
+                                  border: OutlineInputBorder(),
+                                  labelText: 'Workout 1'),
+                            ),
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
+                                    hintText: "Bench Press",
                                     border: OutlineInputBorder(),
                                     labelText: 'Workout 2')),
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
+                                    hintText: "Yoga",
                                     border: OutlineInputBorder(),
                                     labelText: 'Workout 3')),
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
@@ -99,7 +103,7 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
@@ -108,7 +112,7 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
@@ -121,48 +125,49 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
                         children: [
                           Container(
                             height: 20,
-                            color: Colors.white,
                             child: Text(
-                              '''  Reps/Sets or''',
+                              '''Reps Sets''',
                             ),
                           ),
                           Container(
                             height: 20,
-                            color: Colors.white,
                             child: Text(
                               '''Duration(min)''',
                             ),
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
+                                    hintText: "60min",
                                     border: OutlineInputBorder(),
                                     labelText: 'Workout 1')),
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
+                                    hintText: "3x15",
                                     border: OutlineInputBorder(),
                                     labelText: 'Workout 2')),
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
+                                    hintText: "90 minutes",
                                     border: OutlineInputBorder(),
                                     labelText: 'Workout 3')),
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
@@ -171,7 +176,7 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
@@ -180,7 +185,7 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
                           ),
                           Container(
                             color: Colors.white,
-                            height: 30,
+                            height: 36,
                             width: 150,
                             child: TextFormField(
                                 decoration: InputDecoration(
@@ -189,11 +194,427 @@ class _SetFitGoalPageState extends State<SetFitGoalPage> {
                           ),
                         ],
                       ),
+                      Column(
+                        children: [
+                          Container(
+                            height: 40,
+                            child: Text("Workout Days:"),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  top:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sun"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Mon"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Tues"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Wed"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  bottom:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Thur"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Fri"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sat"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  top:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sun"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Mon"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Tues"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Wed"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  bottom:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Thur"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Fri"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sat"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  top:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sun"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Mon"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Tues"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Wed"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  bottom:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Thur"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Fri"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sat"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  top:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sun"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Mon"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Tues"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Wed"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  bottom:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Thur"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Fri"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sat"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  top:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sun"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Mon"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Tues"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Wed"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  bottom:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Thur"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Fri"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sat"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  top:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sun"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Mon"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Tues"))),
+                                SizedBox(
+                                    width: 50,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Wed"))),
+                              ],
+                            )),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border(
+                                  left:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  bottom:
+                                      BorderSide(width: 1, color: Colors.black),
+                                  right:
+                                      BorderSide(width: 1, color: Colors.black),
+                                )),
+                            height: 18,
+                            width: 220,
+                            child: IntrinsicWidth(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Thur"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Fri"))),
+                                SizedBox(
+                                    width: 72,
+                                    child: TextButton(
+                                        onPressed: null, child: Text("Sat"))),
+                              ],
+                            )),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 )),
             SizedBox(
-              height: 25,
+              height: 50,
             ),
             Container(
               height: 25.0,
